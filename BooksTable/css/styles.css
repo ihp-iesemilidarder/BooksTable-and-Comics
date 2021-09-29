@@ -1,0 +1,21 @@
+table{
+    background: transparent;
+}
+table td,table th{
+    padding: 2% 20px;
+    border: 1px solid lightgray;
+}
+#trsearch{
+    border: none;
+    text-align: center;
+}
+table th{
+    padding:1% 20px;
+}
+#trsearch input{
+    width: 50%;
+}
+table tr:nth-child(odd) > td.td{
+    background:#4c8bf5;
+    color: white;
+}

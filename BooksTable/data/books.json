@@ -1,0 +1,20 @@
+[
+    {
+        "title":"20.000 leguas en submarino",
+        "year":1980,
+        "prices":10,
+        "writers":["Jorge Fernandez","Yamiri Sakajura"]
+    },
+    {
+        "title":"Namia",
+        "year":1995,
+        "prices":10,
+        "writers":["Isaac Asimov"]
+    },
+    {
+        "title":"La casa de miedo",
+        "year":1990,
+        "prices":15,
+        "writers":["Maria Hernandez","Marisa Salire"]
+    }
+]
