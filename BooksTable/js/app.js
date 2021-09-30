@@ -2,15 +2,23 @@ let jsonBooks=[];
 const table = document.querySelector("table tbody");
 const search = document.querySelector("table input");
 
+const printValue=(json,value)=>{
+    writers=[]
+    json.forEach(el=>{
+        writers.push(el[value]);
+    });
+    return writers.toString();
+}
+
 const printRows=(search)=>{
     let fragment = document.createDocumentFragment();
     let template = document.querySelector("template").content;
     jsonBooks.forEach(book=>{
-        if(search && String(book.title.toUpperCase()).includes(search.toUpperCase()) || !search){
+        if((search && String(book.title.toUpperCase()).includes(search.toUpperCase())) || !search){
             template.querySelector("tr td.title").textContent=book.title;
             template.querySelector("tr td.year").textContent=book.year;
             template.querySelector("tr td.price").textContent=book.prices;
-            template.querySelector("tr td.writers").textContent=book.writers;
+            template.querySelector("tr td.writers").textContent=printValue(book.writers,"name");
             let clone = template.cloneNode(true);
             fragment.appendChild(clone);
         }
@@ -27,7 +35,16 @@ const loadBooks=async()=>{
 const init=async()=>{
     await loadBooks();
     printRows();
-    search.addEventListener("keyup",()=>printRows(search.value));
+    search.addEventListener("keyup",()=>{
+        if(search.value.length>=3){
+            printRows(search.value);
+        }
+    });
+    search.addEventListener("keydown",()=>{
+        if(search.value.length<3){
+            printRows()
+        }
+    })
 }
 
-init();
+window.onload=init();

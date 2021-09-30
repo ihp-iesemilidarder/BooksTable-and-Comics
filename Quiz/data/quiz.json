@@ -1,0 +1,53 @@
+[
+    {
+        "ask":"¿Que es HTML?",
+        "answers":[
+            {
+                "text":"HyperText Markup Language",
+                "valid":true
+            },
+            {
+                "text":"HTML",
+                "valid":false
+            },
+            {
+                "text":"Lenguage de programacion",
+                "valid":false
+            }
+        ]
+    },
+    {
+        "ask":"¿Que es JS?",
+        "answers":[
+            {
+                "text":"TypeScript",
+                "valid":false
+            },
+            {
+                "text":"JavaScript",
+                "valid":true
+            },
+            {
+                "text":"Laravel",
+                "valid":false
+            }
+        ]
+    },
+    {
+        "ask":"¿Que es Django?",
+        "answers":[
+            {
+                "text":"Un plugin de python",
+                "valid":false
+            },
+            {
+                "text":"Una biblioteca de herramientas de optimización para Python",
+                "valid":false
+            },
+            {
+                "text":"Un framework de Python para hacer Desarrollo web",
+                "valid":true
+            }
+        ]
+    }
+]
